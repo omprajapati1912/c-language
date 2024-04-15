@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+  
+     int a[10],i,size;
+     
+     printf("enter size of array : ");
+     scanf("%d",&size);
+     
+     printf("Enter array elements: \n");
+     
+     for(i=0;i<size;i++){
+         scanf("%d",&a[i]);
+     }
+     
+     printf("the squares are : ");
+      for(i=0;i<size;i++){
+          printf("%d ",a[i] * a[i]);
+      }
+
+    return 0;
+}
