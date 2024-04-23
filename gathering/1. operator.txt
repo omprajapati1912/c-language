@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+float add(float no1, float no2);
+float subtract(float no1, float no2);
+float multiply(float no1, float no2);
+float divide(float no1, float no2);
+
+int main() {
+    
+    char operator;
+    float no1, no2, result;
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+
+       printf("Enter first number: ");
+        scanf("%f", &no1);
+        printf("Enter second number: ");
+        scanf("%f", &no2);
+
+    switch (operator) {
+        case '+':
+            result = add(no1, no2);
+            break;
+        case '-':
+            result = subtract(no1, no2);
+            break;
+        case '*':
+            result = multiply(no1, no2);
+            break;
+        case '/':
+            if (no2 != 0) {
+                result = divide(no1, no2);
+            } else {
+                printf("Error: Division by zero is not allowed.\n");
+                return 0;  
+            }
+            break;
+        default:
+            printf("Error: Invalid operator.\n");
+            return 0; 
+    }
+
+    printf("Result: %.2f\n", result);
+
+    return 0;
+}
+
+float add(float no1, float no2) {
+    return no1 + no2;
+}
+
+float subtract(float no1, float no2) {
+    return no1 - no2;
+}
+
+float multiply(float no1, float no2) {
+    return no1 * no2;
+}
+
+float divide(float no1, float no2) {
+    return no1 / no2;
+}
