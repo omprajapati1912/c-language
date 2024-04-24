@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int length(char *a);
+
+int main() {
+    char a[25];
+    printf("Enter a string: ");
+    scanf("%s", a);
+    int ans = length(a);
+    printf("Length of the string: %d\n", ans);
+    return 0;
+}
+
+int length(char *a) {
+    int length = 0;
+    while (*a != '\0') {
+        length++;
+        a++;
+    }
+    
+    return length;
+}
